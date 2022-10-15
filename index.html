@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- visor -->
+        <div class="grid-visor visor">
+            <input class="input-visor" type="text" id="visor" value="0">
+        </div>
+
+        <!-- primrira linha -->
+        <button class="btn-numero" value="7" onclick="DigitaNumero(this.value)">7</button>
+        <button class="btn-numero" value="8" onclick="DigitaNumero(this.value)">8</button>
+        <button class="btn-numero" value="9" onclick="DigitaNumero(this.value)">9</button>
+        <button class="btn-operacao" value="/" onclick="btnOperacao(this.value)">÷</button>
+
+        <!-- segunda linha -->
+        <button class="btn-numero" value="4" onclick="DigitaNumero(this.value)">4</button>
+        <button class="btn-numero" value="5" onclick="DigitaNumero(this.value)">5</button>
+        <button class="btn-numero" value="6" onclick="DigitaNumero(this.value)">6</button>
+        <button class="btn-operacao" value="*" onclick="btnOperacao(this.value)">×</button>
+
+        <!-- terceira linha -->
+        <button class="btn-numero" value="1" onclick="DigitaNumero(this.value)">1</button>
+        <button class="btn-numero" value="2" onclick="DigitaNumero(this.value)">2</button>
+        <button class="btn-numero" value="3" onclick="DigitaNumero(this.value)">3</button>
+        <button class="btn-operacao" value="-" onclick="btnOperacao(this.value)">-</button>
+
+        <!-- querta linha -->
+        <button class="btn-resultado" onclick="btnC()">C</button>
+        <button class="btn-numero" value="0" onclick="DigitaNumero(this.value)">0</button>
+        <button class="btn-resultado" onclick="btnIg()">=</button>
+        <button class="btn-operacao" value="+" onclick="btnOperacao(this.value)">+</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    background-color: #000000;
+    font-family: sans-serif;
+}
+
+
+/* grid */
+.grid-container {
+    display: grid;
+    height: 550px;
+    grid-template-columns: [col1] 50px [col2] 50px [col3] 50px [col4] 50px [end];
+    grid-template-rows: [linha1] 50px [linha2] 50px [linha3] 50px [linha4] 50px [linha5] 50px;
+    justify-content: center;
+    align-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+/* visor */
+.grid-visor {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+
+.input-visor {
+    color: #fcfcfc;
+    width: 210px;
+    height: 40px;
+    font-size: 38px;
+    background-color: transparent;
+    border: transparent;
+    text-align: right;
+}
+
+.visor {
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: linha1;
+    grid-row-end: 2;
+}
+
+
+/* numeros */
+.btn-numero {
+    background-color: #333333;
+    color: #fcfcfc;
+    padding: 12px 0;
+    font-size: 23px;
+    text-align: center;
+    border-radius: 100%;
+    height: 52px;
+    width: 52px;
+}
+
+.btn-numero:hover {
+    transition: 200ms;
+    background-color: #737373;
+    cursor: pointer;
+}
+
+
+/* operações */
+.btn-operacao {
+    background-color: #ff9f0a;
+    color: #fcfcfc;
+    /* font-weight: 600; */
+    padding: 12px 0;
+    font-size: 23px;
+    text-align: center;
+    border-radius: 100%;
+    height: 52px;
+    width: 52px;
+}
+
+.btn-operacao:hover {
+    transition: 200ms;
+    background-color: #fbc78d;
+    cursor: pointer;
+}
+
+.btn-resultado {
+    background-color: #a5a5a5;
+    color: #000000;
+    font-weight: 600;padding: 12px 0;
+    font-size: 23px;
+    text-align: center;
+    border-radius: 100%;
+    height: 52px;
+    width: 52px;
+}
+
+.btn-resultado:hover {
+    transition: 200ms;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
