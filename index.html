@@ -9,36 +9,37 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <div class="grid-container">
-        <!-- visor -->
-        <div class="grid-visor visor">
-            <input class="input-visor" type="text" id="visor" value="0">
+    <div class="grid-body">
+        <div class="grid-container">
+            <!-- visor -->
+            <div class="grid-visor visor">
+                <input class="input-visor" type="text" id="visor" value="0" readonly>
+            </div>
+    
+            <!-- primrira linha -->
+            <button class="btn-numero" value="7" onclick="DigitaNumero(this.value)">7</button>
+            <button class="btn-numero" value="8" onclick="DigitaNumero(this.value)">8</button>
+            <button class="btn-numero" value="9" onclick="DigitaNumero(this.value)">9</button>
+            <button id="btnDiv" class="btn-operacao" value="/" onclick="btnOperacao(this.value, '#btnDiv')">÷</button>
+    
+            <!-- segunda linha -->
+            <button class="btn-numero" value="4" onclick="DigitaNumero(this.value)">4</button>
+            <button class="btn-numero" value="5" onclick="DigitaNumero(this.value)">5</button>
+            <button class="btn-numero" value="6" onclick="DigitaNumero(this.value)">6</button>
+            <button  id="btnMult" class="btn-operacao" value="*" onclick="btnOperacao(this.value, '#btnMult')">×</button>
+    
+            <!-- terceira linha -->
+            <button class="btn-numero" value="1" onclick="DigitaNumero(this.value)">1</button>
+            <button class="btn-numero" value="2" onclick="DigitaNumero(this.value)">2</button>
+            <button class="btn-numero" value="3" onclick="DigitaNumero(this.value)">3</button>
+            <button  id="btnMenos" class="btn-operacao" value="-" onclick="btnOperacao(this.value, '#btnMenos')">-</button>
+    
+            <!-- querta linha -->
+            <button class="btn-resultado" onclick="btnC()">C</button>
+            <button class="btn-numero" value="0" onclick="DigitaNumero(this.value)">0</button>
+            <button class="btn-resultado" onclick="btnIg()">=</button>
+            <button id="btnMais" class="btn-operacao" value="+" onclick="btnOperacao(this.value, '#btnMais')">+</button>
         </div>
-
-        <!-- primrira linha -->
-        <button class="btn-numero" value="7" onclick="DigitaNumero(this.value)">7</button>
-        <button class="btn-numero" value="8" onclick="DigitaNumero(this.value)">8</button>
-        <button class="btn-numero" value="9" onclick="DigitaNumero(this.value)">9</button>
-        <button class="btn-operacao" value="/" onclick="btnOperacao(this.value)">÷</button>
-
-        <!-- segunda linha -->
-        <button class="btn-numero" value="4" onclick="DigitaNumero(this.value)">4</button>
-        <button class="btn-numero" value="5" onclick="DigitaNumero(this.value)">5</button>
-        <button class="btn-numero" value="6" onclick="DigitaNumero(this.value)">6</button>
-        <button class="btn-operacao" value="*" onclick="btnOperacao(this.value)">×</button>
-
-        <!-- terceira linha -->
-        <button class="btn-numero" value="1" onclick="DigitaNumero(this.value)">1</button>
-        <button class="btn-numero" value="2" onclick="DigitaNumero(this.value)">2</button>
-        <button class="btn-numero" value="3" onclick="DigitaNumero(this.value)">3</button>
-        <button class="btn-operacao" value="-" onclick="btnOperacao(this.value)">-</button>
-
-        <!-- querta linha -->
-        <button class="btn-resultado" onclick="btnC()">C</button>
-        <button class="btn-numero" value="0" onclick="DigitaNumero(this.value)">0</button>
-        <button class="btn-resultado" onclick="btnIg()">=</button>
-        <button class="btn-operacao" value="+" onclick="btnOperacao(this.value)">+</button>
     </div>
-
 </body>
 </html>

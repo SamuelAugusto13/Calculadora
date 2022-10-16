@@ -1,5 +1,6 @@
 var operacao = null;
 var resultado = 0;
+var idAtivo = null;
 
 //Numero
 function DigitaNumero(valor) {
@@ -14,11 +15,19 @@ function DigitaNumero(valor) {
 }
 
 // Operações
-function btnOperacao(valor) {
+function btnOperacao(valor, id) {
     var visor = document.getElementById('visor');
     resultado = visor.value;
     operacao = valor
     visor.value = "";
+
+    if(idAtivo != null){
+        document.querySelector(idAtivo).classList.remove("btn-ativo");
+        idAtivo = null;
+    }
+
+    document.querySelector(id).classList.add("btn-ativo");
+    idAtivo = id;
 }
 
 
@@ -27,7 +36,12 @@ function btnC() {
     var visor = document.getElementById('visor');
     visor.value = '0'; 
     operacao = null;
-    console.log(visor)
+    console.log(visor);
+
+    if(idAtivo != null){
+        document.querySelector(idAtivo).classList.remove("btn-ativo");
+        idAtivo = null;
+    }
 }
 
 // Igual
@@ -45,6 +59,11 @@ function btnIg() {
     }
     if (operacao == "+") {
         resultado = parseFloat(resultado) + parseFloat(visor.value);
+    }
+
+    if(idAtivo != null){
+        document.querySelector(idAtivo).classList.remove("btn-ativo");
+        idAtivo = null;
     }
 
     visor.value = resultado;
